@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.random.RandomGenerator;
 
 public class Order {
-    public class Dellivery {	
+    public class Dellivery {
 
         private Long id;
         private String products;
@@ -60,6 +60,4 @@ public class Order {
             return id;
         }}}
 
-        
-       
 

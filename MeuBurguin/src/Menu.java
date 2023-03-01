@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class Menu {
+package MeuBurguin.src;
+
+public class Menu {
 }
