@@ -1,6 +1,5 @@
 package model.util;
 import model.Product;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

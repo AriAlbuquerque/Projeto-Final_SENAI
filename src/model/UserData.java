@@ -12,7 +12,7 @@ public class UserData {
 
         }
 
-        public UserData(Long id, String name, String phone, String address, String email) {
+        public UserData() {
             this.id = id;
             this.name = name;
             this.phone = phone;
