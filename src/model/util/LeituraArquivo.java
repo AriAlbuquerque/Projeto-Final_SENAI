@@ -1,4 +1,4 @@
-package model.util;
+/*package model.util;
 import model.Product;
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,8 +15,7 @@ public class LeituraArquivo  {
 
     public List<Product> Burgers() {
 
-        String pathBurger = " C:\\Users\\arian\\Hamburguer\\burhuer.csv";
-        List<Product> burgersList;
+        String pathBurger = "C:\\Users\\arthu\\OneDrive\\Documentos\\Arthur\\Programação\\Java Senai\\lista-burguer.csv";    List<Product> burgersList;
         burgersList = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader((File) burgersList))) {
@@ -42,3 +41,4 @@ public class LeituraArquivo  {
 
 
 
+*/

@@ -1,7 +1,9 @@
 package Application;
+
 import model.Product;
 import model.UserData;
 import model.util.LeituraArquivo;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -88,9 +90,6 @@ public class Menu {
 
                 case 1  :
                     System.out.println("Cadastro");
-
-
-
 
                     break;
                 case 2  :
