@@ -2,65 +2,64 @@ package model;
 
 public class UserData {
 
-        private Long id;
-        private String name;
-        private String phone;
-        private String address;
-        private String email;
+    private String nome;
+    private String endereco;
+    private String telefone;
+    private String cpf;
+    private String email;
 
-        public void User() {
+    public UserData(String nome, String endereco, String telefone, String cpf) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.email = email;
+    }
 
-        }
+    public String getNome() {
+        return nome;
+    }
 
-        public UserData() {
-            this.id = id;
-            this.name = name;
-            this.phone = phone;
-            this.address = address;
-            this.email = email;
-        }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-        public Long getId() {
-            return id;
-        }
+    public String getEndereco() {
+        return endereco;
+    }
 
-        public void setId(Long id) {
-            this.id = id;
-        }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
 
+    public String getTelefone() {
+        return telefone;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
-        public void setNome(String name) {
-            this.name = name;
-        }
+    public String getCpf() {
+        return cpf;
+    }
 
-        public String getPhone() {
-            return phone;
-        }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
-        public void setPhone(String phone) {
-            this.phone = phone;
-        }
+    public String getEmail() {
+        return email;
+    }
 
-        public String getAddress() {
-            return address;
-        }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-        public void setAddress(String address) {
-            this.address = address;
-        }
+    public void Visualizar() {
+        System.out.println(nome + "\n" + endereco + "\n" + telefone + "\n" + cpf + "\n");
 
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
     }
 
 
-
+}
