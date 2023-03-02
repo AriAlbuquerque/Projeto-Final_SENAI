@@ -1,5 +1,6 @@
 package model;
 import java.util.Random;
+
 import java.util.random.RandomGenerator;
 import java.time.LocalDateTime;
 
@@ -9,44 +10,28 @@ public class Order {
     private Integer quantidade;
     private Double price;
 
+import java.util.List;
+public class Order {
+
+
+        public Long id;
+        public String products;
+        public Integer quantidade;
+        private Double price;
+
+
     public Order(Long id, String products, Integer quantidade, Double price) {
-        this.id = id;
-        this.products = products;
-        this.quantidade = quantidade;
-        this.price = price;
+     //   String.List< [1]>
+
+
+
+
+
+
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getProducts() {
-        return products;
-    }
-
-    public void setProducts(String products) {
-        this.products = products;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 
     public Long gerarNumeroPedido() {
         Random idAleatorios = new Random();
@@ -60,3 +45,6 @@ public class Order {
 
 
 }
+
+   }
+

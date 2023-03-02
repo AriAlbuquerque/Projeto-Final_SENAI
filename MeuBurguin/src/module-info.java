@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author arian
- *
- */
-module MeuBurguin {
-}
