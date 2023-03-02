@@ -36,11 +36,11 @@ public class Menu {
 
 
             System.out.println("\nSelecione a opção abaixo:");
-            System.out.println("[1] Cadastro ");
-            System.out.println("[2] Fazer pedido ");
-            System.out.println("[3] Consulrar pedido ");
-            System.out.println("[4] Cancelar pedido ");
-            System.out.println("[5] Sair ");
+            System.out.println("[1] |Cadastro|");
+            System.out.println("[2] |Fazer pedido|");
+            System.out.println("[3] |Consulrar pedido|");
+            System.out.println("[4] |Cancelar pedido|");
+            System.out.println("[5] |Sair|");
 
             int option=0;
             option = read.nextInt();
@@ -49,7 +49,7 @@ public class Menu {
 
 
             if (option==5) {
-                System.out.println("Thanks for comming <3 ");
+                System.out.println("Thanks for comming <3");
                 read.close();
                 System.exit(05);
 
@@ -63,14 +63,11 @@ public class Menu {
 
                     break;
                 case 2  :
-
-
-                    System.out.println("Pedido");
-                    System.out.println("Selecione a Opção.");
-                    System.out.println("[1] Burger");
-                    System.out.println("[2] Combos");
-                    System.out.println("[3] Drinks");
-                    System.out.println("[4] completment");
+                    System.out.println("Selecione uma opção abaixo:");
+                    System.out.println("[1] |Burger|");
+                    System.out.println("[2] |Combos|");
+                    System.out.println("[3] |Drinks|");
+                    System.out.println("[4] |Complement|");
                     option = read.nextInt();
 
                     //int optionFood = 0;
@@ -80,17 +77,17 @@ public class Menu {
 
 
                         case 1 -> {
-                            System.out.println("Escolha:\n[1] Lanches com Carne\n[2] Lanches Veganos");
+                            System.out.println("Escolha:\n[1] |Lanches com Carne|\n[2] |Lanches Veganos|");
                             option = read.nextInt();
                             switch (option){
 
                                 case 1 -> {
-                                    Product lanche = new Product(1L, "X-Burger", 10.00,"carne");
-                                    Product lanche1 = new Product(2L, "X-Egg      ", 13.00,"carne");
-                                    Product lanche2 = new Product(3L, "X-Baccon", 20.00,"carne");
-                                    Product lanche3 = new Product(4L, "X-Salada", 22.00,"carne");
+                                    Product lanche = new Product(1L, "X-Burger", 10.00,"Carne");
+                                    Product lanche1 = new Product(2L, "X-Egg      ", 13.00,"Carne");
+                                    Product lanche2 = new Product(3L, "X-Baccon", 20.00,"Carne");
+                                    Product lanche3 = new Product(4L, "X-Salada", 22.00,"Carne");
                                     System.out.println("____________________________________");
-                                    System.out.println("ID      LANCHES       VALOR    TIPO ");
+                                    System.out.println("ID      LANCHES      VALOR      TIPO");
                                     System.out.println("____________________________________");
                                     lanche.visualizar();
                                     lanche1.visualizar();
@@ -98,13 +95,13 @@ public class Menu {
                                     lanche3.visualizar();
                                 }
                                 case 2 -> {
-                                    Product lancheveg = new Product(5L, "Veg x-shimeji         ", 20.00, "Vegano");
-                                    Product lancheveg1 = new Product(6L, "veg x-lentilha        ",30.00, "Vegano");
-                                    Product lancheveg2 = new Product(7L, "veg x-castanha-de-caju",50.00, "Vegano");
-                                    Product lancheveg3 = new Product(8L, "veg x-grão-de-bico    ",15.00, "    Vegano");
-                                    System.out.println("________________________________________________________");
-                                    System.out.println("ID          LANCHES                VALOR            TIPO");
-                                    System.out.println("________________________________________________________");
+                                    Product lancheveg = new Product(5L, "Veg X-Shimeji           ", 20.00, "Vegano");
+                                    Product lancheveg1 = new Product(6L, "Veg X-Lentilha          ",30.00, "Vegano");
+                                    Product lancheveg2 = new Product(7L, "Veg X-Castanha-de-Caju  ",50.00, "Vegano");
+                                    Product lancheveg3 = new Product(8L, "Veg X-Grão-de-Bico      ",15.00, "Vegano");
+                                    System.out.println("_____________________________________________________");
+                                    System.out.println("ID          LANCHES                  VALOR       TIPO");
+                                    System.out.println("_____________________________________________________");
                                     lancheveg.visualizar();
                                     lancheveg1.visualizar();
                                     lancheveg2.visualizar();
@@ -125,12 +122,6 @@ public class Menu {
                         }
 
                     }
-
-
-
-
-
-
                     break;
                 case 3  :
                     System.out.println("Consultar pedido: ");
