@@ -1,18 +1,15 @@
 package model;
-
 public class Product {
     private Long id;
-    private String name;
-    private String tipe;
-    private Double price;
-
-    public Product(Long id, String name, String tipe, Double price) {
+    private String nome;
+    private Double valor;
+    private String tipo;
+    public Product(Long id, String nome, Double valor, String tipo) {
         this.id = id;
-        this.name = name;
-        this.tipe = tipe;
-        this.price = price;
+        this.nome = nome;
+        this.valor = valor;
+        this.tipo = tipo;
     }
-
     public Long getId() {
         return id;
     }
@@ -21,35 +18,35 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getTipe() {
-        return tipe;
+    public Double getValor() {
+        return valor;
     }
 
-    public void setTipe(String tipe) {
-        this.tipe = tipe;
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
 
-    public Double getPrice() {
-        return price;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    @Override
-    public String toString() {
-        return String.format( " %.2f ------------ ",price) + " " + id + " " + name + " " + tipe  ;
-    }
+    public void visualizar() {
 
+
+        System.out.println(id + "\t    " + nome + "\t  " + valor + " \t   " + tipo);
+
+
+    }
 }
-
-

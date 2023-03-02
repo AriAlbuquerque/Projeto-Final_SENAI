@@ -1,14 +1,13 @@
 package model;
 import java.util.Random;
 import java.util.random.RandomGenerator;
+import java.time.LocalDateTime;
 
 public class Order {
-
-
-        private Long id;
-        private String products;
-        private Integer quantidade;
-        private Double price;
+    private Long id;
+    private String products;
+    private Integer quantidade;
+    private Double price;
 
     public Order(Long id, String products, Integer quantidade, Double price) {
         this.id = id;
@@ -48,5 +47,16 @@ public class Order {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    public Long gerarNumeroPedido() {
+        Random idAleatorios = new Random();
+        id = idAleatorios.nextLong();
+
+        while (id <= 0) {
+            id = idAleatorios.nextLong();
+        }
+        return id;
+    }
+
 
 }
