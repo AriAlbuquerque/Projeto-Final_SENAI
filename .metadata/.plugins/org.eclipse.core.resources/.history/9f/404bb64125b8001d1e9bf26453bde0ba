@@ -5,7 +5,7 @@ import java.util.random.RandomGenerator;
 public class Order {
     public class Dellivery {
 
-        private Long id;
+        private Long numeroDoPedido;
         private String products;
         private Integer quantidade;
         private Double price;
@@ -18,8 +18,8 @@ public class Order {
         public void Order() {
         }
 
-        public void Order(long id, String products, double price, Integer quantidade) {
-            this.id = id;
+        public void Order(long numeroDoPedido, String products, double price, Integer quantidade) {
+            this.numeroDoPedido = numeroDoPedido;
             this.products = products;
             this.price = price;
             this.quantidade = quantidade;
@@ -29,8 +29,8 @@ public class Order {
 
         }
 
-        public void products(long id, double price, String products) {
-            this.id = id;
+        public void products(long numeroDoPedido, double price, String products) {
+            this.numeroDoPedido = numeroDoPedido;
             this.price = price;
             this.products = products;
         }
@@ -39,8 +39,8 @@ public class Order {
 
         }
 
-        public void Quantity(long id, double price) {
-            this.id = id;
+        public void Quantity(long numeroDoPedido, double price) {
+            this.numeroDoPedido = numeroDoPedido;
             this.price = price;
 
             //*
@@ -52,12 +52,12 @@ public class Order {
 
             Random idRandomGenerator;
             idRandomGenerator = new Random();
-            id = RandomGenerator.getDefault().nextLong();
+            numeroDoPedido = RandomGenerator.getDefault().nextLong();
 
-            while (id <= 0) {
-                id = RandomGenerator.getDefault().nextLong();
+            while (numeroDoPedido <= 0) {
+                numeroDoPedido = RandomGenerator.getDefault().nextLong();
             }
-            return id;
+            return numeroDoPedido;
         }}}
 
 
