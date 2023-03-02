@@ -2,54 +2,84 @@ package model;
 
 public class Product {
     private Long id;
+    private String nome;
+    private Double valor;
+    private String tipo;
+    public Product(Long id, String nome, Double valor, String tipo) {
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor;
+        this.tipo = tipo;
+    }
+    public Long getId() {
+        return id;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicReference;
+
+public class Product {
+    private AtomicReference<Long> id = new AtomicReference<Long>();
     private String name;
     private String tipe;
     private Double price;
 
     public Product(Long id, String name, String tipe, Double price) {
-        this.id = id;
+        this.id.set(id);
         this.name = name;
         this.tipe = tipe;
         this.price = price;
     }
 
-    public Long getId() {
-        return id;
+
+    private static AtomicLong counter = new AtomicLong(0);
+    public long nextId() {
+        this.id.set(nextId());
+        return counter.incrementAndGet();
+
+
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.id.set(id);
     }
 
-    public String getName() {
-        return name;
+
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getTipe() {
-        return tipe;
+    public Double getValor() {
+        return valor;
     }
 
-    public void setTipe(String tipe) {
-        this.tipe = tipe;
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
 
-    public Double getPrice() {
-        return price;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    @Override
-    public String toString() {
-        return String.format( " %.2f ------------ ",price) + " " + id + " " + name + " " + tipe  ;
-    }
 
+    public void visualizar() {
+
+
+
+
+        System.out.println(id + "\t    " + nome + "\t  " + valor + " \t   " + tipo);
+
+
+    }
 }
-
-
