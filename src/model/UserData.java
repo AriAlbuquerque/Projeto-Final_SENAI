@@ -2,19 +2,23 @@ package model;
 
 public class UserData {
 
-    private String nome;
-    private String endereco;
-    private String telefone;
-    private String cpf;
-    private String email;
+    String nome;
+    protected String endereco;
+    protected String telefone;
+    protected String cpf;
+    protected String email;
 
-    public UserData(String nome, String endereco, String telefone, String cpf, String email) {
+    protected UserData(String nome, String endereco, String telefone, String cpf, String email) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
         this.cpf = cpf;
         this.email = email;
     }
+
+    public UserData() {
+    }
+
 
     public String getNome() {
         return nome;
