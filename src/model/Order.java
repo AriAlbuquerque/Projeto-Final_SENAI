@@ -19,6 +19,10 @@ public class Order {
         this.price = price;
     }
 
+    public Order() {
+
+    }
+
     public Long getNumeroDoPedido() {
         return numeroDoPedido;
     }
@@ -67,10 +71,6 @@ public class Order {
         public void OrderNumber(){
             Long orderNum = numeroDoPedido;
         }
-    public static double Pagar(double price,int quantidade) {
-        return price* quantidade;
-    }
-
 }
 
 

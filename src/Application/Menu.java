@@ -2,9 +2,6 @@ package Application;
 import model.Product;
 import model.UserData;
 import model.Order;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,7 +39,7 @@ public class Menu {
         System.out.println(" --------------------------------------------------------------------------- ");
         System.out.println("|                                   My Burgin                               |");
         System.out.println(" --------------------------------------------------------------------------- ");
-        System.out.println("|                  Segunda-feira  a Domingo das 9h às 23h                   |");
+        System.out.println("|                  Segunda-feira  a Domingo das 12h às 23h                   |");
         System.out.println("|     Formas de Pagamento: Dinheiro, Pix | Cartão de Débito e Crédito       |");
         System.out.println("|         Taxa de Entrega: R$ 10,00 | Tempo Estimado: 30min - 90min         |");
         System.out.println(" --------------------------------------------------------------------------- ");
@@ -146,7 +143,7 @@ public class Menu {
                                 quantidade= read.nextInt();
 
 
-                                System.out.println(Order.Pagar(price,quantidade));
+                           ;
 
                                 double preco=lanche3.getValor()*quantidade;
                                    System.out.println(preco);
