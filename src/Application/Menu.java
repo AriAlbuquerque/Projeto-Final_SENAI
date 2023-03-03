@@ -21,12 +21,13 @@ public class Menu {
         String nome;
         String endereco;
         String telefone;
-        String cpf;
+        String cpf = " ";
         String email;
         //lista de prudutos pedido
         List<Product> lanches = new ArrayList<>();
         //String email
         List<UserData> cliente = new ArrayList<>(); //criando a lista do cliente.
+        ArrayList User = new ArrayList();
         double price = 0;
 
 
@@ -37,23 +38,54 @@ public class Menu {
         // System.out.println(lanches);
 
         char resp;
-        do {
+/*
         System.out.println(" --------------------------------------------------------------------------- ");
-        System.out.println("|                                     My Burgin                             |");
+        System.out.println("|                                   My Burgin                               |");
         System.out.println(" --------------------------------------------------------------------------- ");
         System.out.println("|                  Segunda-feira  a Domingo das 9h às 23h                   |");
         System.out.println("|     Formas de Pagamento: Dinheiro, Pix | Cartão de Débito e Crédito       |");
         System.out.println("|         Taxa de Entrega: R$ 10,00 | Tempo Estimado: 30min - 90min         |");
         System.out.println(" --------------------------------------------------------------------------- ");
-        System.out.println("|\t \t \t         Selecione a opção abaixo:                                 |");
+
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("|                      Olá, vamos fazer o seu cadastro!!                    |");
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("| Digite seu nome completo:                                                 |");
+        System.out.println(" --------------------------------------------------------------------------- ");
+        read.skip("\\R?");
+        nome = read.nextLine();
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("| Digite seu endereco com número:                                           |");
+        System.out.println(" --------------------------------------------------------------------------- ");
+        endereco = read.nextLine();
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("| Digite seu telefone:                                                      |");
+        System.out.println(" --------------------------------------------------------------------------- ");
+        telefone = read.nextLine();
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("| Digite seu E-mail:                                                        |");
+        System.out.println(" --------------------------------------------------------------------------- ");
+        email = read.nextLine();
+
+        UserData user1 = new UserData(nome, endereco, telefone, cpf, email);
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("| Cliente cadastrado com sucesso!!                                          |");
+        System.out.println(" --------------------------------------------------------------------------- ");
+*/
+
+
+
+
+        do {
+        System.out.println(" --------------------------------------------------------------------------- ");
+        System.out.println("|                                                                           |");
+        System.out.println("|                   Selecione a opção abaixo:                               |");
         System.out.println("|                                                                           |");
         System.out.println("|                                                                           |");
-        System.out.println("|                                                                           |");
-        System.out.println("|                                [1] Cadastro                               |");
-        System.out.println("|                                [2] Fazer pedido                           |");
-        System.out.println("|                                [3] Consulrar pedido                       |");
-        System.out.println("|                                [4] Cancelar pedido                        |");
-        System.out.println("|                                [5] Sair                                   |");
+        System.out.println("|                    [1]    Fazer pedido                                    |");
+        System.out.println("|                    [2]    Consultar pedido                                |");
+        System.out.println("|                    [3]    Cancelar pedido                                 |");
+        System.out.println("|                    [4]    Sair                                            |");
         System.out.println("|                                                                           |");
         System.out.println(" --------------------------------------------------------------------------- ");
 
@@ -62,10 +94,10 @@ public class Menu {
         option = read.nextInt();
 
 
-        if (option == 5) {
+        if (option == 4) {
             System.out.println("Thanks for comming <3");
             read.close();
-            System.exit(05);
+            System.exit(04);
 
         }
 
@@ -73,28 +105,10 @@ public class Menu {
 
 
             case 1:
-                System.out.println("Cadastro");
-                System.out.println("");
-                System.out.println("Digite seu nome completo: ");
-               read.skip("\\R?");
-                nome = read.nextLine();
-                System.out.println("Digite seu Endereco com numero: ");
-                endereco = read.nextLine();
-                System.out.println("Digite seu telefone: ");
-                telefone = read.nextLine();
-                System.out.println("Digite seu E-mail: ");
-                email = read.nextLine();
-
-                cliente = (List<UserData>) new UserData(nome, endereco, telefone, email);
-                System.out.println("Cliente Cadastrado.");
-
-
-
-                break;
-            case 2:
                 List<Order> Pedido = new ArrayList<>();
 
                 do {
+                    //user1.VisualizarNome();
                     System.out.println("Selecione uma opção abaixo:");
                     System.out.println("[1] Burger");
                     System.out.println("[2] Kombos");
@@ -117,9 +131,9 @@ public class Menu {
                                 Product lanche1 = new Product(2L, "X-Egg      ", 13.00, "Carne");
                                 Product lanche2 = new Product(3L, "X-Baccon", 20.00, "Carne");
                                 Product lanche3 = new Product(4L, "X-Salada", 22.00, "Carne");
-                                System.out.println("____________________________________");
-                                System.out.println("ID      BURGERS     PRICE       TYPE");
-                                System.out.println("____________________________________");
+                                System.out.println("________________________________________");
+                                System.out.println("ID      BURGERS       PRICE         TYPE");
+                                System.out.println("________________________________________");
                                 lanche.visualizar();
                                 lanche1.visualizar();
                                 lanche2.visualizar();
@@ -134,8 +148,8 @@ public class Menu {
 
                                 System.out.println(Order.Pagar(price,quantidade));
 
-                               //double preco=lanche3.getValor()*quantidade;
-                             //   System.out.println(preco);
+                                double preco=lanche3.getValor()*quantidade;
+                                   System.out.println(preco);
 
                             }
                             case 2 -> {
@@ -143,9 +157,9 @@ public class Menu {
                                 Product lanche5 = new Product(6L, "Veg X-Lentilha          ", 30.00, "Vegano");
                                 Product lanche6 = new Product(7L, "Veg X-Castanha-de-Caju  ", 50.00, "Vegano");
                                 Product lanche7 = new Product(8L, "Veg X-Grão-de-Bico      ", 15.00, "Vegano");
-                                System.out.println("_____________________________________________________");
-                                System.out.println("ID          VEG BURGERS              PRICE       TYPE");
-                                System.out.println("_____________________________________________________");
+                                System.out.println("_________________________________________________________");
+                                System.out.println("ID      VEG BURGERS                   PRICE          TYPE");
+                                System.out.println("_________________________________________________________");
                                 lanche4.visualizar();
                                 lanche5.visualizar();
                                 lanche6.visualizar();
@@ -159,8 +173,7 @@ public class Menu {
                         }
                     }
                     case 2 -> {
-                        System.out.println("kombos");
-                        System.out.println("Selec yours: ");
+                        System.out.println("Select your kombo: ");
                         System.out.println("[1] Vegans [2] Non-Vegans");
                         option = read.nextInt();
                         switch (option) {
@@ -232,31 +245,31 @@ public class Menu {
                                     System.out.println("Quantidade? ");
                                     quantidade= read.nextInt();
                                 }else
-                                    {  System.out.println("________________________________________________________________");
-                                        System.out.println("ID      MEAT KOMBOS                              VALOR     TIPO");
-                                        System.out.println("_______________________________________________________________");
-                                        Product lanche21 = new Product(21L, "X-Burger + Onion Ring + Refrigerante ", 10.00, "Carne");
-                                        Product lanche22 = new Product(22L, "X-Salada + Onion Ring + Refrigerante ", 10.00, "Carne");
-                                        Product lanche23 = new Product(23L, "X-Baccon + Onion Ring + Refrigerante ", 10.00, "Carne");
-                                        Product lanche24 = new Product(24L, "X-Egg    + Onion Ring + Refrigerante ", 10.00, "Carne");
-                                        lanche21.visualizar();
-                                        lanche22.visualizar();
-                                        lanche23.visualizar();
-                                        lanche24.visualizar();
-                                        System.out.println("Selecione pelo ID");
-                                        lanchinho= read.nextInt();
-                                        System.out.println("Quantidade? ");
-                                        quantidade= read.nextInt();
-
-                                       
+                                {  System.out.println("________________________________________________________________");
+                                    System.out.println("ID      MEAT KOMBOS                              VALOR     TIPO");
+                                    System.out.println("_______________________________________________________________");
+                                    Product lanche21 = new Product(21L, "X-Burger + Onion Ring + Refrigerante ", 10.00, "Carne");
+                                    Product lanche22 = new Product(22L, "X-Salada + Onion Ring + Refrigerante ", 10.00, "Carne");
+                                    Product lanche23 = new Product(23L, "X-Baccon + Onion Ring + Refrigerante ", 10.00, "Carne");
+                                    Product lanche24 = new Product(24L, "X-Egg    + Onion Ring + Refrigerante ", 10.00, "Carne");
+                                    lanche21.visualizar();
+                                    lanche22.visualizar();
+                                    lanche23.visualizar();
+                                    lanche24.visualizar();
+                                    System.out.println("Selecione pelo ID");
+                                    lanchinho= read.nextInt();
+                                    System.out.println("Quantidade? ");
+                                    quantidade= read.nextInt();
 
 
-
-                                    }
 
 
 
                                 }
+
+
+
+                            }
 
 
                         }
@@ -268,19 +281,20 @@ public class Menu {
 
 
                         if (option==1) {
-                            System.out.println("________________________________________________________________");
-                            System.out.println("ID      DRINKS                              PRYCE     TYPE");
-                            System.out.println("_______________________________________________________________");
-                            Product bebida =  new Product(25L, "Água ", 3.00, "Sem-gás.");
-                            Product bebida1 = new Product(26L, "Água com gás ", 5.00, "Com-Gás");
-                            Product bebida2 = new Product(28L, "Fanta Laranja Lata", 6.00, "Refrigerante");
-                            Product bebida3 = new Product(28L, "Fanta Uva Lata", 6.00, "Refrigerante");
-                            Product bebida4 = new Product(28L, "Pepsi Lata", 6.00, "Refrigerante");
-                            Product bebida5 = new Product(28L, "H20", 6.00, "Refrigerante");
-                            Product bebida6 = new Product(28L, "Coca-cola Lata", 6.00, "Refrigerante");
-                            Product bebida7 = new Product(27L, "Coca-Cola 1L", 10.00, "Refrigerante");
+                            System.out.println("_____________________________________________________________");
+                            System.out.println("ID      DRINKS               PRYCE            TYPE");
+                            System.out.println("_____________________________________________________________");
+                            Product bebida =  new Product(25L, "Água              ", 3.00, "      Sem-gás");
+                            Product bebida1 = new Product(26L, "Água com gás      ", 5.00, "      Com-Gás");
+                            Product bebida2 = new Product(28L, "Fanta Laranja Lata", 6.00, "      Refrigerante");
+                            Product bebida3 = new Product(28L, "Fanta Uva Lata    ", 6.00, "      Refrigerante");
+                            Product bebida4 = new Product(28L, "Pepsi Lata        ", 6.00, "      Refrigerante");
+                            Product bebida5 = new Product(28L, "H20               ", 6.00, "      Refrigerante");
+                            Product bebida6 = new Product(28L, "Coca-cola Lata    ", 6.00, "      Refrigerante");
+                            Product bebida7 = new Product(27L, "Coca-Cola 1L      ", 10.00, "   Refrigerante");
                             bebida.visualizar();
                             bebida1.visualizar();
+                            bebida2.visualizar();
                             bebida3.visualizar();
                             bebida4.visualizar();
                             bebida5.visualizar();
@@ -292,6 +306,9 @@ public class Menu {
                             System.out.println("Quantidade? ");
                             quantidade= read.nextInt();
                         } else{
+                            System.out.println("_____________________________________________________________________________________");
+                            System.out.println("ID      ALCOOLICS                                                 PRICE     TYPE");
+                            System.out.println("_____________________________________________________________________________________");
                             Product bebida8 =  new Product(28L, "Cerveja Brhama 250 ml ", 5.00, "Alcoolica.");
                             Product bebida9 =  new Product(29L, "Cerveja Império 300ml", 7.00, "Alcoolica");
                             Product bebida10 =  new Product(30L, "Cerveja Hineken 250 ml ", 20.00, "Alcoolica");
@@ -303,26 +320,38 @@ public class Menu {
                             bebida11.visualizar();
                             System.out.println("Quantidade? ");
                             quantidade= read.nextInt();
-
-
-
                         }
-
-
                     }
                     case 4 -> {
                         System.out.println("Complement");
+                        System.out.println("_________________________________________________________");
+                        System.out.println("ID      COMPLEMENTS                  PRICE     TYPE");
+                        System.out.println("_________________________________________________________");
+                        Product bebida8 =  new Product(28L, "Fries                      ", 5.00, "Complement");
+                        Product bebida9 =  new Product(29L, "Onion ring                 ", 7.00, "Complement");
+                        Product bebida10 =  new Product(30L, "Fries with cheddar        ", 20.00, "Complement");
+                        Product bebida11 =  new Product(31L, "Onion ring with chease    ", 15.00, "Complement");
+
+                        bebida8.visualizar();
+                        bebida9.visualizar();
+                        bebida10.visualizar();
+                        bebida11.visualizar();
+                        System.out.println("Quantidade? ");
+                        quantidade= read.nextInt();
+
                     }
 
                 }
+
                 break;
-            case 3:
+            case 2:
                 System.out.println("Consultar pedido: ");
 
                 break;
-            case 4:
+            case 3:
                 System.out.println("Cancelar pedido");
-
+                break;
+            case 4:
                 break;
 
             default:

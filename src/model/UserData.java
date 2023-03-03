@@ -8,7 +8,7 @@ public class UserData {
     private String cpf;
     private String email;
 
-    public UserData(String nome, String endereco, String telefone, String cpf) {
+    public UserData(String nome, String endereco, String telefone, String cpf, String email) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -57,7 +57,11 @@ public class UserData {
     }
 
     public void Visualizar() {
-        System.out.println(nome + "\n" + endereco + "\n" + telefone + "\n" + cpf + "\n");
+        System.out.println(nome + "\n" + endereco + "\n" + telefone + "\n" + cpf + "\n" + email);
+
+    }
+    public void VisualizarNome() {
+        System.out.println("Olá, " + nome);
 
     }
 
